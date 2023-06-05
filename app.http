@@ -1,0 +1,49 @@
+# API 1
+    # get all todo items
+GET http://localhost:3000/todos/2/
+
+######################################################################
+                # Scenario 1
+GET http://localhost:3000/todos/?status=TO%20DO
+###
+                # Scenario 2
+GET http://localhost:3000/todos/?priority=HIGH
+
+###
+                # Scenario 3
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+                # Scenario 4
+GET http://localhost:3000/todos/?search_q=Play
+###
+
+#API 2
+GET http://localhost:3000/todos/
+###
+
+
+#API 3
+POST  http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+###
+
+# API 4
+PUT http://localhost:3000/todos/2/
+Content-Type: application/json
+
+{
+    "priority": "HEIGH"
+  }
+###
+
+//api 5
+
+DELETE http://localhost:3000/todos/10/
